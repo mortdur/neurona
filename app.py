@@ -32,13 +32,13 @@ with tab3:
   with col1:
     x0 = st.slider("Peso w0:",0.0, 5.0,key="x00")
     w0 = st.number_input("Entrada x0",key="w00")
-    b = st.number_input("Introduzca el valor del sesgo")
   with col2:
     x1 = st.slider("Peso w1:",0.0, 5.0,key="x01")
     w1 = st.number_input("Entrada x1",key="w01")
   with col3:
     x2 = st.slider("Peso w2:",0.0, 5.0,key="x02")
     w2 = st.number_input("Entrada x2",key="w02")
+  b = st.number_input("Introduzca el valor del sesgo")
     
   if st.button("Calcular la salida",key="salida3"):
     y = x0 * w0 + x1 * w1 + x2 * w2 + b
