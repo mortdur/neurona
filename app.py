@@ -3,9 +3,6 @@ import pandas as pd
 import numpy as np
 import joblib
 
-import pandas as pd
-import numpy as np
-
 def relu(x):
   return np.maximum(0, x)
 
@@ -38,19 +35,23 @@ class Neuron():
       self.func = hip
     return self.func(calc)
 st.image("neurona.jpg", width=450)
+miNeurona = Neuron(weights, bias, func)
 st.title("Simulador de neurona")
 
 c = st.slider("Indica el numero de entradas y pesos:",0.0, 5.0)
-input_numbers = []
-for i in range(c):
-  input_numbers.append(st.number_input(f"w{i}", step = 0.01))
-
 
 st.title("¡Entradas!")
 x = st.number_input("Entrada x")
+input_numbers = []
+for i in range(c):
+  input_numbers.append(st.number_input(f"x{i}", step = 0.01))
 
 st.title("¡Pesos!")
 weights = st.number_input("Entrada w")
+w = []
+for i in range(c):
+  w.append(st.number_input(f"w{i}", step = 0.01))
+miNeurona.changeweights(w)
 
 col1, col2 = st.columns(2)
 with col1:
