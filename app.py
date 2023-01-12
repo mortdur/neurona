@@ -43,17 +43,18 @@ miNeurona = Neuron(weights=[0.0], bias= 0.0, func="ReLu")
 st.title("Simulador de neurona")
 
 c = st.slider("Indica el numero de entradas y pesos:",1 , 5 ,step = 1)
-columns = st.columns(c)
 st.title("¡Entradas!")
+columns = st.columns(c)
 input_numbers = []
 for i in range(c):
   with columns[i]:
     input_numbers.append(st.number_input(f"x{i}", step = 0.01))
   
 st.title("¡Pesos!")
+columns2 = st.columns(c)
 w = []
 for i in range(c):
-  with columns[i]:
+  with columns2[i]:
     w.append(st.number_input(f"w{i}", step = 0.01))
 miNeurona.changeweights(w)
 
