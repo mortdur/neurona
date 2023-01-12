@@ -53,7 +53,8 @@ for i in range(c):
 st.title("¡Pesos!")
 w = []
 for i in range(c):
-  w.append(st.number_input(f"w{i}", step = 0.01))
+  with columns[i]:
+    w.append(st.number_input(f"w{i}", step = 0.01))
 miNeurona.changeweights(w)
 
 col1, col2 = st.columns(2)
