@@ -46,26 +46,7 @@ with col2:
   func = st.selectbox('Selecciona funcion de activacion',("Sigmoide", "ReLu", "Tangente Hipervolica" ))
       
 submint = st.button("Calcular la salida")
-st.image("neurona.jpg", width=450)
-st.title("Simulador de neurona")
-
-c = st.slider("Indica el numero de entradas y pesos:",0.0, 5.0)
-
-st.title("¡Entradas!")
-x = st.number_input("Entrada x")
-
-st.title("¡Pesos!")
-weights = st.number_input("Entrada w")
-
-col1, col2 = st.columns(2)
-with col1:
-  bias = st.number_input("Introduzca el valor del sesgo")
-with col2:
-  func = st.selectbox('Selecciona funcion de activacion',("Sigmoide", "ReLu", "Tangente Hipervolica" ))
-      
-submint = st.button("Calcular la salida")
 if submint:
   miNeurona = Neuron(weights, bias, func)
   output = miNeurona.run(input_data = x)
   st.text(output)
-  
