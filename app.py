@@ -55,6 +55,7 @@ miNeurona.changeweights(w)
 col1, col2 = st.columns(2)
 with col1:
   bias = st.number_input("Introduzca el valor del sesgo")
+  miNeurona.changebias(bias)
 with col2:
   func = st.selectbox('Selecciona funcion de activacion',("Sigmoide", "ReLu", "Tangente Hipervolica" ))
       
