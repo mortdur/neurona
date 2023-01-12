@@ -45,7 +45,8 @@ with col1:
 with col2:
   func = st.selectbox('Selecciona funcion de activacion',("Sigmoide", "ReLu", "Tangente Hipervolica" ))
       
-if st.button("Calcular la salida"):
+submint = st.button("Calcular la salida")
+if submint:
   miNeurona = Neuron(weights, bias, func)
   output = miNeurona.run(input_data = x)
   print(output)
