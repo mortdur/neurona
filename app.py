@@ -62,5 +62,5 @@ with col2:
       
 if st.button("Calcular la salida"):
   miNeurona = Neuron(weights, bias, func)
-  output = miNeurona.run(input_data = x)
+  output = miNeurona.run(input_data = input_numbers)
   st.text(output)
