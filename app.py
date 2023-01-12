@@ -34,8 +34,9 @@ class Neuron():
     elif self.func == "Tangente Hipervolica":
       self.func = hip
     return self.func(calc)
+
 st.image("neurona.jpg", width=450)
-miNeurona = Neuron(weights, bias, func)
+miNeurona = Neuron(weights=[0.0], bias= 0.0, func="ReLu")
 st.title("Simulador de neurona")
 
 c = st.slider("Indica el numero de entradas y pesos:",0.0, 5.0)
