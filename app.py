@@ -39,7 +39,7 @@ st.image("neurona.jpg", width=450)
 miNeurona = Neuron(weights=[0.0], bias= 0.0, func="ReLu")
 st.title("Simulador de neurona")
 
-c = st.slider("Indica el numero de entradas y pesos:",0.0, 5.0)
+c = st.slider("Indica el numero de entradas y pesos:",0 , 5 ,step = 1)
 
 st.title("¡Entradas!")
 x = st.number_input("Entrada x")
