@@ -24,6 +24,9 @@ class Neuron():
   def changeweights(self,weights):
     self.weights = weights
     
+  def changefunc(self,func):
+    self.func = func
+    
   def run(self, input_data):
     x = np.array(input_data)
     calc = np.dot(self.weights, x) + self.bias
@@ -58,7 +61,8 @@ with col1:
   miNeurona.changebias(bias)
 with col2:
   func = st.selectbox('Selecciona funcion de activacion',("Sigmoide", "ReLu", "Tangente Hipervolica" ))
-      
+  miNeurona.changefunc(func)
+  
 if st.button("Calcular la salida"):
   output = miNeurona.run(input_data = input_numbers)
   st.text(output)
