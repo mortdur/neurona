@@ -3,4 +3,3 @@
 *   Se podrán cambiar los pesos y el sesgo a posteriori.
 *    Dado un vector de entrada, la neurona debe ser capaz de dar la salida adecuada.
 [Web](https://mortdur-neurona-app-rzt9li.streamlit.app)
-<a href="URL">Designación del link objetivo</a>
